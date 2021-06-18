@@ -1,5 +1,6 @@
 
 library(dplyr)
+library(readr)
 
 # read in data ----------------------------------------------------------------
 
@@ -66,5 +67,5 @@ avgs <- data %>%
   summarize(across(1:66, mean))
 
 # write out to csv
-write_csv(avg, "avg_data.csv")
+write_csv(avgs, "avg_data.csv")
 
